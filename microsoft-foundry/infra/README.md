@@ -102,7 +102,7 @@ are available in the selected region.
 
 ## Configuration
 
-Defaults connect to the public Neo4j `companies` demo graph.
+Defaults connect to the public Neo4j `c360` demo graph.
 To override deployment settings such as the Neo4j database,
 ingress mode, or container image, copy this folder's `.env.sample`
 to `.env` before running `./deploy.sh`:
@@ -132,7 +132,7 @@ Important knobs (full list in `infra/.env.sample`):
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `NEO4J_URI` | demo DB | Neo4j Bolt URI. |
-| `NEO4J_DATABASE` | `companies` | Neo4j database. |
+| `NEO4J_DATABASE` | `neo4j` | Neo4j database. |
 | `NEO4J_READ_ONLY` | `true` | Read-only MCP tools. Set `false` for writes. |
 | `NEO4J_MCP_CONTAINER_IMAGE` | `mcp/neo4j:latest` | Pin a tested tag. |
 | `MCP_EXTERNAL_INGRESS` | `true` | Public HTTPS. `false` makes it internal. |
@@ -150,7 +150,7 @@ Authorization: Basic <base64(username:password)>
 Authorization: Bearer <token>
 ```
 
-Basic auth is the default for the `companies` demo graph and
+Basic auth is the default for the `c360` demo graph and
 direct Neo4j username/password access. Bearer token auth is for
 Neo4j Enterprise or Aura deployments configured for SSO or OIDC;
 the MCP server forwards the token to Neo4j and does not perform
@@ -164,8 +164,8 @@ Azure API Management in front of this server.
 ## Smoke Test
 
 ```bash
-export NEO4J_USERNAME=companies
-export NEO4J_PASSWORD=companies
+export NEO4J_USERNAME=neo4j
+export NEO4J_PASSWORD=q8tMOkPJASatZJg_kUKaHauWcgiAUUJbGNcstwBgII8
 ./test-mcp.sh "$(azd env get-value mcpEndpoint)"
 ```
 
