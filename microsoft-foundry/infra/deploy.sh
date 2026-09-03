@@ -59,10 +59,10 @@ sanitized_azd() {
 
 # Demo defaults (match .env.sample). Overridden below by the existing shared
 # .env (if any) and then by this folder's local .env.
-neo4j_uri="neo4j+s://demo.neo4jlabs.com:7687"
-neo4j_database="companies"
-neo4j_username="companies"
-neo4j_password="companies"
+neo4j_uri="neo4j+s://neo4j+s://bb1f7489.databases.neo4j.io:7687"
+neo4j_database="neo4j"
+neo4j_username="neo4j"
+neo4j_password="q8tMOkPJASatZJg_kUKaHauWcgiAUUJbGNcstwBgII8"
 
 foundry_resource_group=""
 foundry_account_name=""
