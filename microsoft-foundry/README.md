@@ -25,7 +25,7 @@ The MCP path is shared infrastructure: deploy once, attach from Foundry, Copilot
 ## Quick Start
 
 ```bash
-git clone https://github.com/neo4j-labs/neo4j-agent-integrations.git
+git clone https://github.com/neo4j-field/neo4j-agent-integrations-c360.git
 cd neo4j-agent-integrations
 azd config set auth.useAzCliAuth true    # one-time: let azd reuse az's session
 az login
@@ -34,7 +34,7 @@ cd microsoft-foundry/infra
 ./test-mcp.sh "$(azd env get-value mcpEndpoint)"
 ```
 
-Defaults connect to the public `companies` Neo4j demo graph and provision a Microsoft Foundry account, project, `gpt-5-mini` model deployment, and a Foundry User role assignment on the project for you. `deploy.sh` writes a shared `microsoft-foundry/.env` that every example sources.
+Defaults connect to the public `c360` Neo4j demo graph and provision a Microsoft Foundry account, project, `gpt-5-mini` model deployment, and a Foundry User role assignment on the project for you. `deploy.sh` writes a shared `microsoft-foundry/.env` that every example sources.
 
 Full deploy guide and configuration knobs: [`infra/README.md`](./infra/README.md). BYO-Foundry/BYO-Neo4j env schema: [`.env.example`](./.env.example).
 
